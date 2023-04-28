@@ -32,6 +32,5 @@ window.addEventListener('touchmove', function() {
   const a = document.querySelector('body');
 
     a.style.backgroundColor = 'blue';
-  
 });
 
