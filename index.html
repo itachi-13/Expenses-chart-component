@@ -196,11 +196,11 @@ window.addEventListener('touchmove', function(e) {
   const touchX = e.touches[0].pageX;
   const body = document.querySelector('body');
 
-  if (((touchX - startTouchX) > 50) && !isScrollingHorizontally) {
+  if (((touchX - startTouchX) > 20) && !isScrollingHorizontally) {
     isScrollingHorizontally = true;
     testimonialSliderLeft();
   } 
-  else if (((startTouchX - touchX) > 50) && !isScrollingHorizontally) {
+  else if (((startTouchX - touchX) > 20) && !isScrollingHorizontally) {
     isScrollingHorizontally = true;
     testimonialSliderRight();
   } 
