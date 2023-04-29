@@ -196,13 +196,13 @@ window.addEventListener('touchmove', function(e) {
   const touchX = e.touches[0].pageX;
   const body = document.querySelector('body');
 
-  if (((touchX - startTouchX) > 100) && !isScrollingHorizontally) {
-    isScrollingHorizontally = true;
-    testimonialSliderRight();
-  } 
-  else if (((startTouchX - touchX) > 100) && !isScrollingHorizontally) {
+  if (((touchX - startTouchX) > 50) && !isScrollingHorizontally) {
     isScrollingHorizontally = true;
     testimonialSliderLeft();
+  } 
+  else if (((startTouchX - touchX) > 50) && !isScrollingHorizontally) {
+    isScrollingHorizontally = true;
+    testimonialSliderRight();
   } 
   // else {
   //   isScrollingHorizontally = false;
