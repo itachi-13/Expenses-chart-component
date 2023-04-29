@@ -195,9 +195,13 @@ window.addEventListener('touchmove', function(e) {
   const touchX = e.touches[0].pageX;
   const body = document.querySelector('body');
 
-  if ((Math.abs(touchX - startTouchX)) > 100) {
+  if ((touchX - startTouchX) > 100) {
     isScrollingHorizontally = true;
-    body.style.backgroundColor = 'red';
+    testimonialSliderRight();
+  } 
+  else if ((startTouchX - touchX) > 100) {
+    isScrollingHorizontally = true;
+    testimonialSliderLeft();
   } 
   // else {
   //   isScrollingHorizontally = false;
@@ -211,6 +215,61 @@ window.addEventListener('touchmove', function(e) {
 //     body.style.backgroundColor = '';
 //   }
 // });
+
+
+function testimonialSliderRight() {
+  let first = document.querySelector(".testimonial-container.first");
+  let second = document.querySelector(".testimonial-container.second");
+  let third = document.querySelector(".testimonial-container.third");
+  let fourth = document.querySelector(".testimonial-container.fourth");
+  let fifth = document.querySelector(".testimonial-container.fifth");
+  let sixth = document.querySelector(".testimonial-container.sixth");
+
+  first.classList.remove("first");
+  first.classList.add("sixth");
+
+  second.classList.remove("second");
+  second.classList.add("first");
+
+  third.classList.remove("third");
+  third.classList.add("second");
+
+  fourth.classList.remove("fourth");
+  fourth.classList.add("third");
+
+  fifth.classList.remove("fifth");
+  fifth.classList.add("fourth");
+
+  sixth.classList.remove("sixth");
+  sixth.classList.add("fifth");
+}
+
+function testimonialSliderLeft() {
+  let first = document.querySelector(".testimonial-container.first");
+  let second = document.querySelector(".testimonial-container.second");
+  let third = document.querySelector(".testimonial-container.third");
+  let fourth = document.querySelector(".testimonial-container.fourth");
+  let fifth = document.querySelector(".testimonial-container.fifth");
+  let sixth = document.querySelector(".testimonial-container.sixth");
+
+  first.classList.remove("first");
+  first.classList.add("second");
+
+  second.classList.remove("second");
+  second.classList.add("third");
+
+  third.classList.remove("third");
+  third.classList.add("fourth");
+
+  fourth.classList.remove("fourth");
+  fourth.classList.add("fifth");
+
+  fifth.classList.remove("fifth");
+  fifth.classList.add("sixth");
+
+  sixth.classList.remove("sixth");
+  sixth.classList.add("first");
+}
 
 </script>
 
