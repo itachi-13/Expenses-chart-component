@@ -1,6 +1,3 @@
-body {
-  background-color: yellow;
-}
 /* git add --all; git commit -m 'update'; git push origin */
 * {
   margin: 0;
@@ -14,7 +11,7 @@ body {
 .main-area {
   min-height: 100vh;
   width: 100%;
-  /* background: #F7E9DC; */
+  background: #F7E9DC;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,137 +127,5 @@ body {
 
   .chart-box .column {
     width: 4px;
-  }
-}
-
-
-
-
-
-
-
-
-#testimonials {
-  background: linear-gradient(#fafafa 50px, white 50px);
-  background: linear-gradient(white 50px, #fafafa 50px);
-  /* background: radial-gradient(circle, #fff4ce, #f5f0ff, #f3d8ff); */
-
-  padding: 100px 0 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  height: 470px;
-  color: #000;
-}
-
-#testimonials h2 {
-  margin-bottom: 0;
-  font-weight: 600;
-  color: #01034a;
-  font-size: 42px;
-}
-
-#testimonials .quotations {
-  width: 100px;
-  transform: rotate(180deg);
-}
-
-.right-arrow,
-.left-arrow {
-  border-radius: 50%;
-  border: 1px solid black;
-  position: absolute;
-  top: 300px;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  transform: translate(260px);
-}
-
-.left-arrow {
-  transform: translate(-300px) rotate(180deg);
-}
-
-.right-arrow:hover,
-.left-arrow:hover {
-  cursor: pointer;
-}
-
-.testimonial-container {
-  width: 500px;
-  position: absolute;
-  top: 200px;
-  left: calc(50% - 250px);
-  transition: 1s;
-  font-weight: 600;
-}
-
-.testimonial-container.first {
-  transform: translateX(-1200px);
-  opacity: 0;
-}
-
-.testimonial-container.second {
-  transform: translateX(-600px);
-  opacity: 0.5;
-}
-
-.testimonial-container.third {
-  transform: translateX(0);
-}
-
-.testimonial-container.fourth {
-  transform: translateX(600px);
-  opacity: 0.5;
-}
-
-.testimonial-container.fifth {
-  transform: translateX(1200px);
-  opacity: 0;
-}
-
-.testimonial-container.sixth {
-  transform: translateX(1800px);
-  opacity: 0;
-}
-
-.quote-author {
-  margin-top: 20px;
-}
-
-.quote-author img {
-  max-width: 60px;
-  border-radius: 50%;
-}
-
-.quote-author p {
-  display: inline;
-  margin-left: 10px;
-}
-
-@media (width < 768px) {
-  .testimonial-container {
-    width: 400px;
-    left: calc(50% - 200px);
-  }
-
-  .right-arrow {
-    transform: translate(200px);
-  }
-
-  .left-arrow {
-    transform: translate(-240px) rotate(180deg);
-  }
-}
-
-@media (width < 576px) {
-  .testimonial-container {
-    width: 320px;
-    left: calc(50% - 160px);
-  }
-
-  .right-arrow,
-  .left-arrow {
-    display: none;
   }
 }
