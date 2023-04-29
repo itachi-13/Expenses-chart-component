@@ -186,21 +186,22 @@ const myChart = new Chart(ctx, {
 
 let isScrollingHorizontally = false;
 let startTouchX = 0;
+let testimonial = document.querySelector('.testimonials-container')
 
-window.addEventListener('touchstart', function(e) {
+testimonial.addEventListener('touchstart', function(e) {
   startTouchX = e.touches[0].pageX;
   isScrollingHorizontally = false;
 });
 
-window.addEventListener('touchmove', function(e) {
+testimonial.addEventListener('touchmove', function(e) {
   const touchX = e.touches[0].pageX;
   const body = document.querySelector('body');
 
-  if (((touchX - startTouchX) > 20) && !isScrollingHorizontally) {
+  if (((touchX - startTouchX) > 40) && !isScrollingHorizontally) {
     isScrollingHorizontally = true;
     testimonialSliderLeft();
   } 
-  else if (((startTouchX - touchX) > 20) && !isScrollingHorizontally) {
+  else if (((startTouchX - touchX) > 40) && !isScrollingHorizontally) {
     isScrollingHorizontally = true;
     testimonialSliderRight();
   } 
