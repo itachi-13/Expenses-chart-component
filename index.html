@@ -189,17 +189,18 @@ let startTouchX = 0;
 
 window.addEventListener('touchstart', function(e) {
   startTouchX = e.touches[0].pageX;
+  isScrollingHorizontally = false;
 });
 
 window.addEventListener('touchmove', function(e) {
   const touchX = e.touches[0].pageX;
   const body = document.querySelector('body');
 
-  if ((touchX - startTouchX) > 100) {
+  if (((touchX - startTouchX) > 100) && !isScrollingHorizontally) {
     isScrollingHorizontally = true;
     testimonialSliderRight();
   } 
-  else if ((startTouchX - touchX) > 100) {
+  else if (((startTouchX - touchX) > 100) && !isScrollingHorizontally) {
     isScrollingHorizontally = true;
     testimonialSliderLeft();
   } 
