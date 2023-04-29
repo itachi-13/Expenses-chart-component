@@ -187,16 +187,30 @@ const myChart = new Chart(ctx, {
 let isScrollingHorizontally = false;
 let startTouchX = 0;
 
+window.addEventListener('touchstart', function(e) {
+  startTouchX = e.touches[0].pageX;
+});
+
 window.addEventListener('touchmove', function(e) {
   const touchX = e.touches[0].pageX;
   const body = document.querySelector('body');
-  
-  if (touchX > 1000) {
-    body.style.backgroundColor = 'red'; // Change the background color to red
-  }
+
+  if ((Math.abs(touchX - startTouchX)) > 100) {
+    isScrollingHorizontally = true;
+    body.style.backgroundColor = 'red';
+  } 
+  // else {
+  //   isScrollingHorizontally = false;
+  //   body.style.backgroundColor = '';
+  // }
 });
 
-
+// window.addEventListener('touchend', function() {
+//   if (!isScrollingHorizontally) {
+//     const body = document.querySelector('body');
+//     body.style.backgroundColor = '';
+//   }
+// });
 
 </script>
 
