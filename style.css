@@ -1,147 +1,266 @@
 body {
-    background-color: greenyellow;
+  background-color: cyan;
 }
 /* git add --all; git commit -m 'update'; git push origin */
-*{
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
 }
 
-.main-area{
-    min-height: 100vh;
-    width: 100%;
-    /* background: #F7E9DC; */
-    display:  -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    align-items: center;
-    
+.main-area {
+  min-height: 100vh;
+  width: 100%;
+  /* background: #F7E9DC; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+}
 
+.card-area .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #ec755d;
+  padding: 1.4rem;
+  border-radius: 1rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.top .left p {
+  font-size: 0.8rem;
+  color: #ffffffbd;
+  margin-bottom: 3px;
+}
+
+.top .left h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.top .right img {
+  width: 50px;
+}
+
+.card-area .bottom {
+  background: #fffcf7;
+  padding: 1.4rem;
+  border-radius: 1rem;
+}
+
+.main h1 {
+  font-size: 1.5rem;
+  margin-bottom: 01.5rem;
+}
+
+.main hr {
+  margin: 1rem;
+  background: #d0c9c94a;
+  height: 2px;
+  border: 0;
+}
+
+.main .bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.bottom-section .left p {
+  color: #adadad;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
+}
+
+.bottom-section .left h2 {
+  font-size: 2rem;
+}
+
+.bottom-section .right {
+  margin-bottom: 5px;
+}
+
+.bottom-section .right p.percent {
+  color: #000;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.bottom-section .right p.last-month {
+  color: #adadad;
+  letter-spacing: 0.3px;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .card-area .top,
+  .card-area .bottom {
+    padding: 1rem;
+    border-radius: 0.7rem;
+  }
+
+  .chart-box .column {
+    width: 45px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .card-area .top,
+  .card-area .bottom {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .chart-box .column {
+    width: 4px;
+  }
 }
 
 
-.card-area .top{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background: #EC755D;
-    padding: 1.4rem;
-    border-radius: 1rem;
-    color: white;
-    margin-bottom: 1rem;
+
+
+
+
+
+
+#testimonials {
+  background: linear-gradient(#fafafa 50px, white 50px);
+  background: linear-gradient(white 50px, #fafafa 50px);
+  /* background: radial-gradient(circle, #fff4ce, #f5f0ff, #f3d8ff); */
+
+  padding: 100px 0 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  height: 470px;
+  color: #000;
 }
 
-
-.top .left p{
-    font-size: 0.8rem;
-    color: #ffffffbd;
-    margin-bottom: 3px;
+#testimonials h2 {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: #01034a;
+  font-size: 42px;
 }
 
-.top .left h1{
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: 1px;
+#testimonials .quotations {
+  width: 100px;
+  transform: rotate(180deg);
 }
 
-.top  .right img{
-    width: 50px;
+.right-arrow,
+.left-arrow {
+  border-radius: 50%;
+  border: 1px solid black;
+  position: absolute;
+  top: 300px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  transform: translate(260px);
 }
 
-.card-area .bottom{
-    background: #FFFCF7;
-    padding: 1.4rem;
-    border-radius: 1rem;
-
+.left-arrow {
+  transform: translate(-300px) rotate(180deg);
 }
 
-.main h1{
-    font-size: 1.5rem;
-    margin-bottom: 01.5rem;
+.right-arrow:hover,
+.left-arrow:hover {
+  cursor: pointer;
 }
 
-
-
-
-
-
-
-.main hr{
-    margin: 1rem;
-    background: #d0c9c94a;
-    height: 2px;
-    border: 0;
+.testimonial-container {
+  width: 500px;
+  position: absolute;
+  top: 200px;
+  left: calc(50% - 250px);
+  transition: 1s;
+  font-weight: 600;
 }
 
-
-.main .bottom-section{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+.testimonial-container.first {
+  transform: translateX(-1200px);
+  opacity: 0;
 }
 
-.bottom-section .left p{
-    color: #adadad;
-    font-size: 0.8rem;
-    letter-spacing: 0.3px;
+.testimonial-container.second {
+  transform: translateX(-600px);
+  opacity: 0.5;
 }
 
-.bottom-section .left h2{
-    font-size: 2rem;
+.testimonial-container.third {
+  transform: translateX(0);
 }
 
-.bottom-section .right{
-    margin-bottom: 5px;
+.testimonial-container.fourth {
+  transform: translateX(600px);
+  opacity: 0.5;
 }
 
-.bottom-section .right p.percent{
-    color: #000;
-    font-weight: 700;
-    font-size: 1rem;
-    text-align: right;
-
+.testimonial-container.fifth {
+  transform: translateX(1200px);
+  opacity: 0;
 }
 
-.bottom-section .right p.last-month{
-    color: #adadad;
-    letter-spacing: 0.3px;
-    font-size: 1rem;
-
+.testimonial-container.sixth {
+  transform: translateX(1800px);
+  opacity: 0;
 }
 
-
-@media only screen and (max-width:500px){
-    .card-area .top, .card-area .bottom{
-        padding: 1rem;
-        border-radius: 0.7rem;
-
-    }
-
-    .chart-box .column{width: 45px;}
+.quote-author {
+  margin-top: 20px;
 }
-@media only screen and (max-width:400px){
 
-    .card-area .top, .card-area .bottom{
-        padding: 0.5rem;
-        border-radius: 0.5rem;
+.quote-author img {
+  max-width: 60px;
+  border-radius: 50%;
+}
 
-    }
+.quote-author p {
+  display: inline;
+  margin-left: 10px;
+}
 
-    .chart-box .column{width: 4px;}
+@media (width < 768px) {
+  .testimonial-container {
+    width: 400px;
+    left: calc(50% - 200px);
+  }
 
+  .right-arrow {
+    transform: translate(200px);
+  }
+
+  .left-arrow {
+    transform: translate(-240px) rotate(180deg);
+  }
+}
+
+@media (width < 576px) {
+  .testimonial-container {
+    width: 320px;
+    left: calc(50% - 160px);
+  }
+
+  .right-arrow,
+  .left-arrow {
+    display: none;
+  }
 }

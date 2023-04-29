@@ -68,6 +68,82 @@
 
  
 <canvas id="myChart" width="400" height="400"></canvas>
+
+
+
+
+
+
+<section id="testimonials" class="section">
+  <h2>Testimonials
+  </h2>
+  <div><div></div></div>
+
+  <img src="./img/right-arrow.svg" alt="right arrow" class="right-arrow">
+  <img src="./img/right-arrow.svg" alt="left arrow" class="left-arrow">
+
+  <div class="testimonials-container">
+      <div class="testimonial-container first">
+        <img src="./img/quotations.svg" alt="quotations" class="quotations">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, mollitia obcaecati odio in necessitatibus ducimus</p>
+
+        <div class="quote-author">
+          <img src="./img/Matt Studdert.webp" alt="Matt Studdert">
+          <p>Matt Studdert</p>
+        </div>
+        </div>
+
+        <div class="testimonial-container second">
+          <img src="./img/quotations.svg" alt="quotations" class="quotations">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, mollitia obcaecati odio in necessitatibus ducimus.</p>
+
+          <div class="quote-author">
+            <img src="./img/Quincy-Larson-photo.jpg" alt="Quincy Larson">
+            <p>Quincy Larson</p>
+          </div>
+            </div>
+
+        <div class="testimonial-container third">
+          <img src="./img/quotations.svg" alt="quotations" class="quotations">
+          <p>I'm a hardworking, dedicated person who always strives to do my best and make a meaningful contribution in everything I do.</p>
+
+          <div class="quote-author">
+              <img src="./img/Avatar.jpg" alt="Ameer Ibrahim">
+            <p>Ameer Ibrahim</p>
+          </div>
+        </div>
+
+        <div class="testimonial-container fourth">
+          <img src="./img/quotations.svg" alt="quotations" class="quotations">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, mollitia obcaecati odio in necessitatibus ducimus.</p>
+
+          <div class="quote-author">
+            <img src="./img/Matt Studdert.webp" alt="Matt Studdert">
+            <p>Matt Studdert</p>
+          </div>
+            </div>
+
+        <div class="testimonial-container fifth">
+          <img src="./img/quotations.svg" alt="quotations" class="quotations">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, mollitia obcaecati odio in necessitatibus ducimus.</p>
+
+          <div class="quote-author">
+            <img src="./img/Quincy-Larson-photo.jpg" alt="Quincy Larson">
+            <p>Quincy Larson</p>
+          </div>
+            </div>
+    
+            <div class="testimonial-container sixth">
+              <img src="./img/quotations.svg" alt="quotations" class="quotations">
+              <p>I'm a hardworking, dedicated person who always strives to do my best and make a meaningful contribution in everything I do.</p>
+    
+              <div class="quote-author">
+                <img src="./img/Avatar.jpg" alt="Ameer Ibrahim">
+                <p>Ameer Ibrahim</p>
+              </div>
+            </div>
+  </div>
+</section>
 <script>
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
@@ -111,29 +187,17 @@ const myChart = new Chart(ctx, {
 let isScrollingHorizontally = false;
 let startTouchX = 0;
 
-window.addEventListener('touchstart', function(e) {
-  startTouchX = e.touches[0].pageX;
-});
-
 window.addEventListener('touchmove', function(e) {
   const touchX = e.touches[0].pageX;
   const body = document.querySelector('body');
-
-  if (touchX > startTouchX) {
-    isScrollingHorizontally = true;
-    body.style.backgroundColor = 'red';
+  
+  if (touchX > 0) {
+    body.style.backgroundColor = 'red'; // Change the background color to red
   } else {
-    isScrollingHorizontally = false;
-    body.style.backgroundColor = '';
+    body.style.backgroundColor = ''; // Revert to the default background color
   }
 });
 
-window.addEventListener('touchend', function() {
-  if (!isScrollingHorizontally) {
-    const body = document.querySelector('body');
-    body.style.backgroundColor = '';
-  }
-});
 
 
 </script>
